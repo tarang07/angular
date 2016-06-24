@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Q3 Angular
+	</title>
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="mycontroller”">
+{{greeting}}
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("mycontroller”", function($scope) {
+    $scope.greeting = "Hello World";
+});
+</script>
+
+</body>
+</html>
+
