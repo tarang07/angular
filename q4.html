@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Q4 Angular
+	</title>
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myApp">
+<div ng-controller="mycontroller">
+{{ firstName + " " + lastName }}
+</div>
+<div ng-controller="mycontroller2">
+{{grade}}
+</div>
+<script>
+var app = angular.module("myApp", []);
+app.controller("mycontroller", function($scope) {
+    $scope.firstName = "Naruto";
+    $scope.lastName = "Uzamaki";
+});
+
+app.controller("mycontroller2",function($scope) {
+	$scope.grade = "Hokage";
+});
+
+</script>
+
+</body>
+</html>
+
