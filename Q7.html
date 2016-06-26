@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myApp">
+
+<div ng-controller="mycontroller">
+  <p>Double Click the button to start alert </p>
+  <button ng-dblclick="myFunc()">OK</button>
+  <p>Alert will apear only after double clicking the button</p>
+</div>
+
+<script>
+angular.module('myApp', [])
+  .controller('mycontroller', ['$scope', function($scope) {
+    $scope.myFunc = function() {
+      alert("Alert bro !!!");
+    };
+  }]);
+</script>
+</body>
+</html>
